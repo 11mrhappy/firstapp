@@ -15,3 +15,28 @@ routes: <String, WidgetBuilder> {
 }
 そして、この場合の画面遷移は、pushではなくpushNamed(context, '/second'); みたいに書く
 ただ、戻るときは普通にpopメソッドでOK
+
+pubspec.yamlの中
+name                アプリ名
+description         アプリの説明
+version             アプリのバージョン番号
+environment         Dart/Flutter SDKのバージョン規約
+dependencies        使うパッケージ     主に使うのはここ
+dev_dependencies    開発時のみ使うパッケージ
+flutter             Flutterの設定(アセットなど)
+
+バージョンの指定方法
+any                 バージョン指定なし(非推奨)
+1.2.3               1.2.3のみ
+' >=1.2.3           1.2.3以上'
+<1.2.3              1.2.3未満
+^1.2.3              1.2.3以上、2.0.0未満
+' >=1.2.3 <2.0.0    1.2.3以上、2.0.0未満'
+そして、flutter pub getを忘れずに
+
+flutter pubコマンド
+pub get             未取得のパッケージ取得
+pub upgrade         最新版のパッケージ取得
+pub outdated        更新可能なパッケージのチェック
+pub deps            依存関係のチェック
+
